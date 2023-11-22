@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 import CustomButton from './CustomButton';
 import { getProviders, signIn, signOut, useSession } from 'next-auth/react';
 import ThemeSwitcher from './theme/ThemeSwitcher';
-import { BsGithub, BsTwitter } from 'react-icons/bs';
+import { BsGithub, BsInstagram, BsLinkedin, BsTwitter } from 'react-icons/bs';
 import { useTheme } from 'next-themes';
 import { RiLogoutBoxLine, RiMenu3Line } from 'react-icons/ri';
 const Navbar = () => {
@@ -34,7 +34,7 @@ const Navbar = () => {
             height={20}
             className='h-full object-contain'
           /> */}
-          <span className='text-xl md:text-3xl text-indigo-700 font-bold dark:text-white'>Carsify</span>
+          <span className='text-xl md:text-3xl text-blue-700 font-bold dark:text-white'>Carsify</span>
         </Link>
 
 
@@ -73,16 +73,16 @@ const Navbar = () => {
 
             ) : (
               <Link href={'/user/login'}>
-                <CustomButton title='Login' type='button' containerStyle='bg-white rounded-full border text-blue-500 w-full rounded-full dark:bg-pink-700 dark:text-slate-300 dark:border-slate-700 dark:text-slate-300' />
+                <CustomButton title='Login' type='button' containerStyle='bg-white rounded-full border text-green-500 w-full rounded-full dark:bg-pink-700 dark:text-slate-300 dark:border-slate-700 dark:text-slate-300' />
               </Link>
             )
           }
           <div className='flex items-center gap-4 border-l dark:border-slate-600 ml-4 pl-4'>
-            <Link href={'https://github.com/Iamsidar07/Car-Showcase'} onClick={() => setIsDropdownShown(false)} className='flex  gap-2'>
+            <Link href={'https://github.com/vd0904/Car-Showcase-main'} onClick={() => setIsDropdownShown(false)} className='flex  gap-2'>
               <BsGithub size={20} className={`h-6 w-6  ${theme === 'dark' ? 'text-slate-400' : 'text-slate-700'}`} />
             </Link>
-            <Link href={'https://twitter.com/iamsidar07'} onClick={() => setIsDropdownShown(false)} className='flex gap-2'>
-              <BsTwitter size={20} className={`h-6 w-6 ${theme === 'dark' ? 'text-slate-400' : 'text-slate-700'}`} />
+            <Link href={'https://www.linkedin.com/in/vedant-dwivedi/'} onClick={() => setIsDropdownShown(false)} className='flex gap-2'>
+              <BsLinkedin size={20} className={`h-6 w-6 ${theme === 'dark' ? 'text-slate-400' : 'text-slate-700'}`} />
             </Link>
             <ThemeSwitcher />
           </div>
@@ -124,7 +124,7 @@ const Navbar = () => {
                       title='Logout'
                       type='button'
                       handleClick={() => { signOut() }}
-                      containerStyle='rounded-full text-white dark:bg-pink-700 dark:text-slate-300  px-6'
+                      containerStyle='rounded-full text-white dark:bg-red-700 dark:text-slate-300  px-6'
                       icon={<RiLogoutBoxLine size={16} className={`text-white`}/>}
                     />
                   </>
@@ -136,12 +136,12 @@ const Navbar = () => {
                 )
               }
               <div className='flex items-baseline gap-2 absolute bottom-4 flex-1'>
-                <Link href={'https://github.com/Iamsidar07/Car-Showcase'} onClick={() => setIsDropdownShown(false)} className='flex gap-2 mr-4'>
+                <Link href={'https://github.com/vd0904/Car-Showcase-main'} onClick={() => setIsDropdownShown(false)} className='flex gap-2 mr-4'>
                   <BsGithub size={20} className={`h-6 w-6 ${theme === 'dark' ? 'text-slate-50' : 'text-slate-700'}`} />
                   <span>Github</span>
                 </Link>
-                <Link href={'https://twitter.com/iamsidar07'} onClick={() => setIsDropdownShown(false)} className='flex gap-2 border-l pl-4 dark:border-zinc-500'>
-                  <BsTwitter size={20} className={`h-6 w-6 ${theme === 'dark' ? 'text-slate-50' : 'text-slate-700'}`} />
+                <Link href={'https://www.linkedin.com/in/vedant-dwivedi/'} onClick={() => setIsDropdownShown(false)} className='flex gap-2 border-l pl-4 dark:border-zinc-500'>
+                  <BsLinkedin size={20} className={`h-6 w-6 ${theme === 'dark' ? 'text-slate-50' : 'text-slate-700'}`} />
                   <span>Twitter</span>
                 </Link>
               </div>
